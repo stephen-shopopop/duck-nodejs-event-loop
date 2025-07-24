@@ -247,8 +247,6 @@ Une solution possible pour réduire ce temps d'exécution est de faire évoluer 
 
 La raison est simple : Node.js s'exécute sur plusieurs threads, avec un ramasse-miettes et un optimiseur de processeur fonctionnant séparément. Cela signifie qu'au sein de Node.js, une grande quantité de CPU peut être disponible avant que le système ne commence à ralentir significativement.
 
----
-
 Une autre solution utilise ce package [node-metrics](https://www.npmjs.com/package/@stephen-shopopop/node-metrics).
 
 Lorsque le package reçoit plusieurs requêtes après un certain temps, l'utilisation des événements dépasse la limite au bout de 0,98 s. Passé ce délai, toute requête entrante reçoit un code d'état de réponse de 503.
@@ -263,7 +261,7 @@ layout: center
 
 Vous pouvez calculer l'ELU à l'aide de la [bibliothèque perf_hooks](https://nodejs.org/api/perf_hooks.html) . Cette fonction renvoie une valeur décimale comprise entre 0 et 1, indiquant la quantité de boucle d'événements utilisée.
 
-Sinon vous pouver utiliser le plugin [node-metrics](https://www.npmjs.com/package/@stephen-shopopop/node-metrics) et vous trouvez sur [repo](https://github.com/stephen-shopopop/node-metrics/tree/main/example) de nombreux examples.
+Sinon vous pouver utiliser le plugin [node-metrics](https://www.npmjs.com/package/@stephen-shopopop/node-metrics) et vous trouvez sur ce [repo](https://github.com/stephen-shopopop/node-metrics/tree/main/example) de nombreux examples.
 
 ---
 layout: end
