@@ -108,8 +108,6 @@ Libuv est donc la librairie qui est utilisée dans Node.js pour l’event-loop. 
 
 Il est important de comprendre comment elle fonctionne a minima car l’exécution des différentes phases va définir comment votre code fonctionnera et dans quel ordre il sera exécuté (ce qui vous permettra de résoudre le challenge de l’introduction).
 
-Le schéma ci-dessous est un schéma que j’ai construit pour représenter les différentes phases de l’event-loop (vous noterez la claire séparation entre votre code, la loop et le système d’exploitation).
-
 Sur le sujet je vous recommande d’aller lire en premier lieu les pages suivantes :
 
 - EN [Débutant] [The Node.js Event Loop, Timers, and process.nextTick()](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
