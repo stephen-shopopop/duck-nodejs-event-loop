@@ -112,9 +112,9 @@ Le schéma ci-dessous est un schéma que j’ai construit pour représenter les 
 
 Sur le sujet je vous recommande d’aller lire en premier lieu les pages suivantes :
 
-EN [Débutant] [The Node.js Event Loop, Timers, and process.nextTick()](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
-EN [Débutant] [Libuv design overview (documentation officielle de Libuv)](https://docs.libuv.org/en/v1.x/design.html).
-EN [Débutant] [An introduction to libuv](https://nikhilm.github.io/uvbook/An%20Introduction%20to%20libuv.pdf).
+- EN [Débutant] [The Node.js Event Loop, Timers, and process.nextTick()](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
+- EN [Débutant] [Libuv design overview (documentation officielle de Libuv)](https://docs.libuv.org/en/v1.x/design.html).
+- EN [Débutant] [An introduction to libuv](https://nikhilm.github.io/uvbook/An%20Introduction%20to%20libuv.pdf).
 
 ---
 layout: two-cols
