@@ -90,6 +90,12 @@ Lien bonus pour les motivés: [EN Reactor - An Object Behavioral Pattern for Dem
 layout: center
 ---
 
+![event-loop-history](./assets/reactor-event-loop.png)
+
+---
+layout: center
+---
+
 ## Histoire
 
 La notion d'[event](https://en.wikipedia.org/wiki/Event_(computing)), event-driven et [event-loop](https://en.wikipedia.org/wiki/Event_loop) ne date pas d’hier et les premières apparitions date des années 80 (même si le pattern est devenu fort populaire depuis une dizaine d’années grâce à l’apparition de lib comme Libuv ou plus récemment Tokio sur Rust).
@@ -97,6 +103,12 @@ La notion d'[event](https://en.wikipedia.org/wiki/Event_(computing)), event-driv
 Il existe très probablement des librairies équivalentes ou des implémentations très sérieuses sur les différents runtime (Python, Ruby, PHP, Lua, Perl etc). Le langage de programmation [Julia](https://julialang.org) est d’ailleurs basé sur Libuv.
 
 Aujourd’hui il devient très clair que le pattern a fait ses preuves et qu’il est très largement apprécié par les développeurs du monde entier pour construire des programmes concurrents (même s’il faut toujours garder en tête qu’il y aura toujours des points forts ainsi que des points faibles).
+
+---
+layout: center
+---
+
+![event-loop-history](./assets/event-loop-history.png)
 
 ---
 layout: center
@@ -113,6 +125,12 @@ Sur le sujet je vous recommande d’aller lire en premier lieu les pages suivant
 - EN [Débutant] [The Node.js Event Loop, Timers, and process.nextTick()](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)
 - EN [Débutant] [Libuv design overview (documentation officielle de Libuv)](https://docs.libuv.org/en/v1.x/design.html).
 - EN [Débutant] [An introduction to libuv](https://nikhilm.github.io/uvbook/An%20Introduction%20to%20libuv.pdf).
+
+---
+layout: center
+---
+
+![event-loop-history](./assets/Libuv-Event-loop-phases.png)
 
 ---
 layout: two-cols
@@ -177,7 +195,7 @@ Promise.all(promises);
 ```
 
 ---
-layout: center
+layout: two-cols
 ---
 
 ## L'event loop
@@ -192,11 +210,15 @@ L' [event loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-
 - Fermer les rappels,
 - Connexions et données entrantes
 
+::right::
+
+![event-loop-history](./assets/event-loop-phase.png)
+
+---
+
 La phase la plus importante est la première: les minuteurs. Les minuteurs sont des fonctions de rappel enregistrées avec "setTimeout()" ou "setInterval()".
 
 Ils permettent également de surveiller la boucle d'événements avec la possibilité de planifier les données, ce qui constitue un excellent moyen de vérifier si un événement est inactif. La boucle d'événements exécute ensuite les temporisateurs expirés et vérifie à nouveau les rappels en attente.
-
----
 
 Les rappels d'E/S sont vérifiés en premier lors de la phase d'interrogation, suivis des rappels "setImmediate()".
 
